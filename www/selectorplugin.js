@@ -27,7 +27,7 @@ SelectorCordovaPlugin.prototype.showSelector = function(options, success_callbac
       wrapWheelText: options.wrapWheelText || false,
       positiveButtonText: options.positiveButtonText || 'Done',
       negativeButtonText: options.negativeButtonText || 'Cancel',
-      fontSize: options.fontSize || 16
+      fontSize: options.fontSize || 18
   };
 
   for(i in config.items) {
