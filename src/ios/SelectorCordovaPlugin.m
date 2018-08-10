@@ -292,7 +292,7 @@ typedef NS_ENUM(NSInteger, SelectorResultType) {
   UILabel* pickerLabel = (UILabel*)view;
   if (!pickerLabel) {
     pickerLabel = [[UILabel alloc] init];
-    pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold" size:18];
+    pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold" size:[[_options objectForKey:@"fontSize"] floatValue]];
     pickerLabel.textAlignment=NSTextAlignmentCenter;
   }
   [pickerLabel setText:_items[component][row]];
