@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, SelectorResultType) {
   UIView *view = [self createPickerView];
 
   NSDictionary *defaultItems = [_options objectForKey:@"defaultItems"];
+  NSArray *defaultItemsIndex =  [ defaultItems allKeys];
   _itemsSelectedIndexes = [@{} mutableCopy];
 
   for (int columnIndex = 0; columnIndex < _items.count; columnIndex++) {
