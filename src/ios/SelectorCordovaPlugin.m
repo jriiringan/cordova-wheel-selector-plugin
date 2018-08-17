@@ -123,7 +123,7 @@ typedef NS_ENUM(NSInteger, SelectorResultType) {
   UILabel *label =[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 180, 30)];
   [label setTextAlignment:NSTextAlignmentCenter];
   [label setTextColor:(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) ? [UIColor blackColor] : [UIColor whiteColor]];
-  [label setFont:[UIFont boldSystemFontOfSize:[[_options objectForKey:@"fontSize"] floatValue]]];
+  [label setFont:[UIFont boldSystemFontOfSize: 21];
   [label setBackgroundColor:[UIColor clearColor]];
   [label setText:[_options objectForKey:@"title"]];
 
@@ -293,7 +293,7 @@ typedef NS_ENUM(NSInteger, SelectorResultType) {
   UILabel* pickerLabel = (UILabel*)view;
   if (!pickerLabel) {
     pickerLabel = [[UILabel alloc] init];
-    pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold" size:[[_options objectForKey:@"fontSize"] floatValue]];
+    pickerLabel.font = [UIFont  systemFontOfSize: 21];
     pickerLabel.textAlignment=NSTextAlignmentCenter;
   }
   [pickerLabel setText:_items[component][row]];
