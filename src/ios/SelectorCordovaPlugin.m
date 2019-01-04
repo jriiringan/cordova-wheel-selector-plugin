@@ -49,7 +49,8 @@ typedef NS_ENUM(NSInteger, SelectorResultType) {
     NSInteger initialValueIndex = 0;
 
     if (defaultItems) {
-      NSString *value = [defaultItems objectForKey:columnIndex];
+      NSNumber *colIndexNum = [NSNumber numberWithInt: columnIndex];
+      NSString *value = [defaultItems objectForKey:colIndexNum];
       NSUInteger index = [[_items objectAtIndex:columnIndex] indexOfObject:value];
       if (NSNotFound != index) {
         initialValueIndex = index;
